@@ -1,0 +1,8 @@
+CREATE TABLE AshStore(id INTEGER PRIMARY KEY, item TEXT, price INTEGER, sold INTEGER);
+INSERT INTO AshStore VALUES (1, "Shirt", 3.99, 3);
+INSERT INTO AshStore VALUES (2, "Shorts", 5.99, 2);
+INSERT INTO AshStore VALUES (3, "Hat", 2.99, 4);
+INSERT INTO AshStore VALUES (4, "Socks", 1.99, 5);
+INSERT INTO AshStore VALUES (5, "Sweatshirt", 25.99, 8);
+SELECT * FROM AshStore GROUP BY price;
+SELECT SUM(price*sold) FROM AshStore GROUP BY id;
